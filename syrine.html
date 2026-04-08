@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syrine Fallouki | Excellence & Stratégie Commerciale</title>
+   
+    <!-- Polices de caractère Prestige -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@200;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* --- CONFIGURATION LUXE CHIC (BLANC & ROSE) --- */
+        :root {
+            --bg-main: #ffffff;
+            --bg-secondary: #fff5f8; /* Rose très pâle pour le fond */
+            --rose-prestige: #b05d7a; /* Rose poudré profond */
+            --rose-accent: #e91e63; /* Rose vif pour les accents */
+            --text-dark: #2d2d2d;
+            --text-soft: #5e5e5e;
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            padding: 30px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #fce4ec;
+            background-color: #fff;
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 1.6rem;
+            color: var(--rose-prestige);
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-decoration: none;
+        }
+
+        .btn-contact {
+            border: 1px solid var(--rose-prestige);
+            padding: 10px 25px;
+            color: var(--rose-prestige);
+            text-decoration: none;
+            border-radius: 2px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: var(--transition);
+        }
+
+        .btn-contact:hover {
+            background: var(--rose-prestige);
+            color: white;
+            box-shadow: 0 5px 15px rgba(176, 93, 122, 0.2);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+            background-color: var(--bg-secondary);
+            margin-bottom: 40px;
+        }
+
+        .profile-wrapper {
+            position: relative;
+            display: inline-block;
+            padding: 8px;
+            border: 1px solid #f8bbd0;
+            border-radius: 50%;
+            margin-bottom: 30px;
+            background-color: #fff;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--rose-prestige);
+            display: block;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            margin-bottom: 10px;
+            letter-spacing: 4px;
+            color: var(--rose-prestige);
+        }
+
+        .rose-text {
+            color: var(--rose-accent);
+        }
+
+        .subtitle {
+            letter-spacing: 2px;
+            font-weight: 400;
+            color: var(--text-soft);
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-desc {
+            max-width: 750px;
+            margin: 0 auto;
+            color: var(--text-soft);
+            font-size: 0.95rem;
+        }
+
+        /* --- SECTIONS --- */
+        section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            text-align: center;
+            margin-bottom: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            color: var(--rose-prestige);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .section-title::before, .section-title::after {
+            content: "";
+            width: 50px;
+            height: 1px;
+            background: var(--rose-prestige);
+            opacity: 0.3;
+        }
+
+        /* --- CARTES EXPÉRIENCES --- */
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 35px;
+            border: 1px solid #fce4ec;
+            position: relative;
+            transition: var(--transition);
+            border-radius: 4px;
+        }
+
+        .card:hover {
+            border-color: var(--rose-accent);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            color: var(--rose-prestige);
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+        }
+
+        .card-date {
+            color: var(--text-soft);
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .card-sub {
+            color: var(--rose-accent);
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .card li {
+            color: var(--text-soft);
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            list-style: none;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .card li::before {
+            content: "♥";
+            position: absolute;
+            left: 0;
+            color: var(--rose-accent);
+            font-size: 0.8rem;
+        }
+
+        /* --- SKILLS & LANGUES --- */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .info-block h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--rose-prestige);
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 1px solid #fce4ec;
+            padding-bottom: 10px;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            color: var(--text-soft);
+        }
+
+        .skill-bar {
+            width: 100%;
+            height: 4px;
+            background: #fce4ec;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: var(--rose-prestige);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            padding: 80px 0;
+            text-align: center;
+            border-top: 1px solid #fce4ec;
+            background-color: var(--bg-secondary);
+        }
+
+        .footer-email {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            text-decoration: none;
+            color: var(--rose-prestige);
+            transition: var(--transition);
+            letter-spacing: 2px;
+        }
+
+        .footer-email:hover {
+            color: var(--rose-accent);
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            .info-grid { grid-template-columns: 1fr; }
+            .card-header { flex-direction: column; gap: 5px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="container">
+        <a href="#" class="logo">S. FALLOUKI</a>
+        <div class="nav-links">
+            <a href="mailto:syrine.fallouki@audencia.com" class="btn-contact">Contact</a>
+        </div>
+    </nav>
+
+    <header class="hero container">
+        <div class="profile-wrapper">
+            <img src="Image Syrine" alt="Syrine FALLOUKI" class="profile-img" onerror="this.src='https://via.placeholder.com/180/b05d7a/fff?text=SF'">
+        </div>
+        <h1>SYRINE <span class="rose-text">FALLOUKI</span></h1>
+        <p class="subtitle">Audencia Business School • Bachelor In Management</p>
+        <p class="hero-desc">
+            Étudiante à Audencia Business School, je recherche une alternance commerciale pour ma 3ème année.
+            Curieuse et polyvalente, je souhaite mettre mon esprit d'analyse et mon implication au service de projets à fort impact.
+        </p>==
+    </header>
+
+    <main class="container">
+       
+        <section>
+            <h2 class="section-title">Expériences Professionnelles</h2>
+            <div class="card-grid">
+               
+                <div class="card">
+                    <div class="card-header">
+                        <h3>RealDev</h3>
+                        <span class="card-date">Août 2025 - Déc. 2025</span>
+                    </div>
+                    <p class="card-sub">Assistante Commerciale & Projet (Stage) - Bruxelles, Belgique</p>
+                    <ul>
+                        <li>Prospection et gestion des prospects via des argumentaires optimisés.</li>
+                        <li>Création de contenus professionnels et optimisation de pages web[.</li>
+                        <li>Soutien opérationnel et coordination interne pour fluidifier les process.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Focus Assurance</h3>
+                        <span class="card-date">Déc. 2024 - Fév. 2025</span>
+                    </div>
+                    <p class="card-sub">Gestionnaire de contrats d'assurance (Stage) - Casablanca, Maroc</p>
+                    <ul>
+                        <li>Conseil client et orientation sur les offres pour renforcer la satisfaction.</li>
+                        <li>Gestion administrative complète et suivi rigoureux des dossiers</li>
+                        <li>Appui commercial par une prospection structurée et des relances d'équipe.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Vivre ADOM</h3>
+                        <span class="card-date">Juin 2025 - Juil. 2025</span>
+                    </div>
+                    <p class="card-sub">Auxiliaire de vie (CDD) - Oise, France</p>
+                    <ul>
+                        <li>Accompagnement quotidien et soutien moral aux personnes âgées ou handicapées.</li>
+                        <li>Surveillance de l'état général pour garantir un environnement sécurisant.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Projets Solidaires</h2>
+            <div class="card">
+                <div class="card-header">
+                    <h3>Organisation de maraudes citoyennes</h3>
+                    <span class="card-date">Avril 2024 - Aujourd'hui</span>
+                </div>
+                <p class="card-sub">Projet Solidaire Annuel</p>
+                <ul>
+                    <li>Conception et mise en place d'un projet d'aide aux sans-abri.</li>
+                    <li>Recherche de financements via cagnotte en ligne et apports personnels.</li>
+                    <li>Gestion de la logistique, des bénévoles et distribution de repas.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="info-grid">
+            <div class="info-block">
+                <h3>Formation & Langues</h3>
+                <ul class="skill-list">
+                    <li class="skill-item"><span>Bachelor In Management (Audencia)</span> <span>2027</span></li>
+                    <li class="skill-item"><span>BAFA (Animateur)</span> <span>2024</span></li>
+                    <li class="skill-item"><span>Français (Maternel)</span></li>
+                    <li class="skill-item"><span>Anglais (B2)</span></li>
+                    <li class="skill-item"><span>Espagnol / Arabe (Notions)</span></li>
+                </ul>
+            </div>
+
+            <div class="info-block">
+                <h3>Expertises</h3>
+                <div class="skill-item">Stratégie Commerciale <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div></div>
+                <div class="skill-item">Gestion de Projet <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div></div>
+                <div class="skill-item">Analyse de Marché <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div></div>
+                <div class="skill-item">Communication Digitale <div class="skill-bar"><div class="skill-progress" style="width: 75%;"></div></div></div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <a href="mailto:syrine.fallouki@audencia.com" class="footer-email">SYRINE.FALLOUKI@AUDENCIA.COM</a>
+            <p style="margin-top: 20px; color: var(--rose-prestige); font-weight: 600; letter-spacing: 1px;">06 02 08 49 15</p>
+            <p style="margin-top: 30px; font-size: 0.7rem; color: #999; text-transform: uppercase; letter-spacing: 2px;">Paris • Bruxelles • Casablanca • Oise</p>
+        </div>
+    </footer>
+
+</body>
+</html>
